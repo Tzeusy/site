@@ -79,7 +79,6 @@
                     <span
                       class="prev"
                       @click="move(-1)"
-                      style="left: 0;"
                     >
                       <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </span>
@@ -109,8 +108,10 @@
           <div class="md-layout">
             <div class="md-layout-item md-size-100 mx-auto">
               <h4 class="title" style='text-align:center; margin:40px;'>Some Fun Projects</h4>
-              <div class="row" v-for="i in Math.ceil(cards.length / 3)" :key="i" style="height:300px; overflow: hidden;">
-                <div class="col s4" v-for="card in cards.slice((i-1)*3, i*3)" :key="card.title" style="height:100%; position: relative">
+              <!-- <div class="row" v-for="i in Math.ceil(cards.length / 3)" :key="i" style="height:300px; overflow: hidden;">
+                <div class="col s12 m6 l4" v-for="card in cards.slice((i-1)*3, i*3)" :key="card.title" style="height:100%; position: relative"> -->
+              <div class="row">
+                <div class="col s12 m6 l4" v-for="card in cards" :key="card.title" style="height:100%; position: relative; height: 280px; padding-top: 10px;">
                   <div class="overlay">
                     <div class="container" style="text-align:center; margin-top:10%; width:80%;">
                       <h6>{{card.title}}</h6>
@@ -122,7 +123,7 @@
                             <i :class="link.icon" style="color:white;"></i>
                           </a>
                           <i v-if="link.description" :class="link.icon" style="color:white">
-                            <p class="blurb">
+                            <p class="blurb" style="font-size: 0.8em">
                               {{link.description}}
                             </p>
                           </i>
@@ -143,11 +144,9 @@
 </template>
 
 <script>
-// import { Tabs } from "@/components";
 
 export default {
   components: {
-    // Tabs
   },
   bodyClass: "profile-page",
   data() {
@@ -430,7 +429,7 @@ $primary: #221e21;
   color: $primary;
   border-radius: 50%;
   margin-top: -25px;
-  margin-left: 20%;
+  margin-left: 0.1vw;
   cursor: pointer;
   line-height: 8px;
   text-align: center;
@@ -447,10 +446,14 @@ $primary: #221e21;
   }
 }
 
+.prev {
+  left: 0;
+}
+
 .next {
   right: 0;
   margin-left: auto;
-  margin-right: 20%;
+  margin-right: 0.1vw;
   text-indent: 2px;
 }
 
