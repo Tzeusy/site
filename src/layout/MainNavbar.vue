@@ -45,7 +45,8 @@
                   </div>
                 </a>
               </li>
-              <li class="md-list-item">  <!-- Blog -->
+              <!-- Blog -->
+              <!-- <li class="md-list-item"> 
                 <a
                   href="/blog"
                   class="md-list-item-router md-list-item-container md-button-clean"
@@ -62,7 +63,7 @@
                     </drop-down>
                   </div>
                 </a>
-              </li>
+              </li> -->
               <li class="md-list-item">  <!-- Resume -->
                 <a
                   href="/resume.pdf"
