@@ -17,6 +17,7 @@ import App from "./App.vue";
 import router from "./router";
 
 import MaterialKit from "./plugins/material-kit";
+import VueAnalytics from "vue-analytics";
 
 Vue.config.productionTip = false;
 
@@ -32,6 +33,11 @@ Vue.mixin({
       NavbarStore
     };
   }
+});
+
+Vue.use(VueAnalytics, {
+  id: 'UA-161418729-1',
+  router
 });
 
 new Vue({

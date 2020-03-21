@@ -104,18 +104,18 @@
         </div>
       </div>
       <div class ="section profile-content">  <!-- Projects  -->
-        <div class="container" style="width:80%; max-width:none">
+        <div class="container" style="width:90%; max-width:none">
           <div class="md-layout">
             <div class="md-layout-item md-size-100 mx-auto">
               <h4 class="title" style='text-align:center; margin:40px;'>Some Fun Projects</h4>
               <!-- <div class="row" v-for="i in Math.ceil(cards.length / 3)" :key="i" style="height:300px; overflow: hidden;">
                 <div class="col s12 m6 l4" v-for="card in cards.slice((i-1)*3, i*3)" :key="card.title" style="height:100%; position: relative"> -->
               <div class="row">
-                <div class="col s12 m6 l4" v-for="card in cards" :key="card.title" style="height:100%; position: relative; height: 280px; padding-top: 10px;">
+                <div class="col s12 m6 l4" v-for="card in cards" :key="card.title" style="height:100%; position: relative; height: 300px; padding-top: 10px; padding-bottom: 10px;">
                   <div class="overlay">
                     <div class="container" style="text-align:center; margin-top:10%; width:80%;">
                       <h6>{{card.title}}</h6>
-                      <p>{{card.blurb}}</p>
+                      <p style="font-size: 0.8rem">{{card.blurb}}</p>
                       <div>
                         <p v-for="link in card.links" :key="link.icon" style="display: inline; margin:10px">
                           <!-- <p>{{link.icon}}</p> -->
@@ -123,7 +123,7 @@
                             <i :class="link.icon" style="color:white;"></i>
                           </a>
                           <i v-if="link.description" :class="link.icon" style="color:white">
-                            <p class="blurb" style="font-size: 0.8em">
+                            <p class="blurb">
                               {{link.description}}
                             </p>
                           </i>
@@ -144,7 +144,6 @@
 </template>
 
 <script>
-
 export default {
   components: {
   },
@@ -206,9 +205,8 @@ export default {
           image: require("@/assets/img/badminton.jpg"),
           title: 'Badminton Court Checking Telegram Bot',
           blurb: `Cycling through Badminton court availabilities on OnePA.sg
-                  to quickly check for all badminton court availabilities via Telegram.
-                  Users can supply either the desired Community Centre or date for which
-                  to check court availabilities.
+                  to quickly check for all badminton court availabilities via Telegram,
+                  and skip on the tedious individual checking otherwise necessary.
           `,
           links: [
             {
@@ -548,6 +546,8 @@ button {
   height:100%;
   margin-left: 0.75rem;
   margin-right: 0.75rem;
+  padding-top: 10px;
+  padding-bottom: 10px;;
   background: #000000;
   color: #fff;
   border-radius: 2%;
