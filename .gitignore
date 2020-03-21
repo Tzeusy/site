@@ -1,7 +1,7 @@
 node_modules
 babel_config*
 build
-package-lock.json
 dist
+package-lock.json
 .eslintrc*
 babel.config.js
