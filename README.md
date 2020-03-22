@@ -1,5 +1,5 @@
 ## About
-My personal webpage with (later developed) blog posts). Though theoretically noone _needs_ to run this repository (being my profile and all...), I'm documenting the setup process, dependencies, etc. so people may perhaps use it as a template or some such in the future.
+My personal webpage. Though theoretically noone _needs_ to run this repository (being my profile and all...), I'm documenting the setup process, dependencies, etc. so people may perhaps use it as a template or some such in the future.
 
 This is built in Vue.js, with design inspired by and built using tools found from [Creative Tim's Vue Material Kit](https://www.creative-tim.com/product/vue-material-kit) and [Materialize CSS](https://materializecss.com/).
 
