@@ -25,16 +25,21 @@
           </div>
           <div class="description text-center">
             <p>
-              I'm a Singaporean with probably too much enthusiasm for technology. I enjoy reading 
-              about geopolitics, debating about ethics, and over-analyzing rational fiction. This site is a consolidation 
-              of my experiences across the various worlds I immerse myself in - be they my latest learnings in the big field 
-              of software, my thoughts and ruminations on the fantastical universes of my SF/F exploration, or even just 
-              reflections about arbitrary topics.
-
-              <!-- I am an individual deeply passionate about technology and design. I have experience with design and 
-              engineering with software development, data science/engineering, and machine learning. 
-              I have also worked in the fields of quantitative finance and blockchain, doing
-              both fullstack development and portfolio strategy development. -->
+              <!-- I enjoy reading about geopolitics, debating about ethics, and over-analyzing rational fiction. This site is a 
+              consolidation  of my experiences across the various worlds I immerse myself in - be they my latest learnings in 
+              the big field of software, my thoughts and ruminations on the fantastical universes of my SF/F exploration, or 
+              even just reflections about arbitrary topics. -->
+              Hello, and welcome to my profile page! <br />
+              I'm Tze How, a 25 year old Singaporean with a Bachelor's of Engineering from the <br />
+              Information Systems Technology and Design (ISTD) pillar of the <br />
+              Singapore University of Technology and 
+              Design (SUTD).
+            </p>
+            <p style="font-size: 12px">(A mouthful, I know - basically, it's a Computer Science course.)</p>
+            <p>
+              I have experience with design and engineering with software development, data science/engineering, and machine learning. 
+              I have also worked in the fields of quantitative finance and blockchain, having built products involving fullstack development, 
+              data engineering/pipelining, data science and deep learning, and finance-related portfolio strategy development.
             </p>
             <br />
           </div>
@@ -543,11 +548,10 @@ button {
   right: 0;
   z-index: 1;
   opacity:0;
-  height:100%;
+  height:280px;
   margin-left: 0.75rem;
   margin-right: 0.75rem;
-  padding-top: 10px;
-  padding-bottom: 10px;;
+  margin-top: 10px;
   background: #000000;
   color: #fff;
   border-radius: 2%;
