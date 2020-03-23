@@ -12,6 +12,7 @@ import BlogPost from './views/BlogPost'
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: "/",
@@ -23,15 +24,23 @@ export default new Router({
       }
     },
     {
-      path: '/blog/',
+      path: '/blog',
       name: 'blog-home',
-      components: {default: BlogHome, header: MainNavbar, footer: MainFooter }
+      components: {default: BlogHome, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 1 },
+        footer: { backgroundColor: "black" }
+      }
     },
     {
       path: '/blog/:slug',
       name: 'blog-post',
-      components: {default: BlogPost, header: MainNavbar, footer: MainFooter }
-    }
+      components: {default: BlogPost, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
+      }
+    },
   ],
   scrollBehavior: to => {
     if (to.hash) {

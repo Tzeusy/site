@@ -35,7 +35,7 @@
               Singapore University of Technology and 
               Design (SUTD).
             </p>
-            <p style="font-size: 12px">(A mouthful, I know - basically, it's a Computer Science course.)</p>
+            <p style="font-size: 12px">(A mouthful, I know - basically, I studied Computer Science.)</p>
             <p>
               I have experience with design and engineering with software development, data science/engineering, and machine learning. 
               I have also worked in the fields of quantitative finance and blockchain, having built products involving fullstack development, 
@@ -161,11 +161,11 @@ export default {
         "Building IoT applications",
         "3D Printing",
         "Laser Cutting",
+        "Project Management/Leadership",
         "Soldering/Woodcrafting",
         "Computer Aided Design",
         "Public Speaking",
-        "Project Management",
-        "Ex-professional gaming (WCG SG LoL, DotA 2 Immortal)",
+        "Competitive Gaming (MOBAs)",
       ],
       cards: [
         {
@@ -266,8 +266,8 @@ export default {
         {
           image: require("@/assets/img/mit.jpg"),
           title: 'SUTD-MIT Global Leadership Programme',
-          blurb: `An exchange programme with MIT, where we spent 10 weeks spent building an electric boat
-                  to sail in the Boston River.
+          blurb: `An exchange programme with the Massachusetts Institute of Technology, where we spent 10 weeks 
+                  building an electric boat to sail the Charles River in Boston.
                  `,
           links: [
             {
@@ -281,7 +281,7 @@ export default {
           title: 'Binary Sudoku',
           blurb: `A Binary Sudoku game on a 8x8 grid built for a Computation Structures 
                   project. Logic programmed on the Mojo FPGA (coded in Lucid); physical setup
-                  built using WS2812b Programmable LEDs and plenty of laser cutting.
+                  built using WS2812b Programmable LEDs and plenty of laser cutting/soldering.
                  `,
           links: [
             {
@@ -413,11 +413,6 @@ export default {
   bottom: -35px;
   opacity:1;
   filter: alpha(opacity=10);
-}
-
-.carousel-item {
-  min-height:50px;
-  max-height:100px;
 }
 
 $primary: #221e21;
