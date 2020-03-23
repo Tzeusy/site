@@ -48,7 +48,7 @@
               <!-- Blog -->
               <li class="md-list-item"> 
                 <a
-                  href="/blog"
+                  href="/#/blog"
                   class="md-list-item-router md-list-item-container md-button-clean"
                 >
                   <div class="md-list-item-content">
