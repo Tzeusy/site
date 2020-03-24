@@ -128,7 +128,7 @@
                             <i :class="link.icon" style="color:white;"></i>
                           </a>
                           <i v-if="link.description" :class="link.icon" style="color:white">
-                            <p class="blurb">
+                            <p class="blurbsquared">
                               {{link.description}}
                             </p>
                           </i>
@@ -249,10 +249,10 @@ export default {
                   exchanges or addresses. Built over summer internship for traceto.io (Codebase proprietary).
                   `,
           links: [
-            // {
-            //   'icon': 'fa fa-trophy',
-            //   'description': 'I guess we got an A..?'
-            // },
+            {
+              'icon': 'fa fa-newspaper',
+              'href': '#/blog/ethereum-address-analyzer'
+            },
           ]
         },
         {
@@ -389,6 +389,18 @@ export default {
   border-radius:2%;
 }
 
+.blurbsquared {
+  text-align: center;
+  font-family:sans-serif;
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  bottom: -2.5rem;
+  background: #000000;
+  color: #fff;
+}
+
 .blurb {
   text-align: center;
   font-family:sans-serif;
@@ -401,17 +413,17 @@ export default {
   color: #fff;
 }
 
-.fa-heart-broken:hover .blurb{
+.fa-heart-broken:hover .blurbsquared{
   transition: opacity .2s;
-  bottom: -35px;
   opacity:1;
+  z-index: 50;
   filter: alpha(opacity=10);
 }
 
-.fa-trophy:hover .blurb{
+.fa-trophy:hover .blurbsquared{
   transition: opacity .2s;
-  bottom: -35px;
   opacity:1;
+  z-index: 50;
   filter: alpha(opacity=10);
 }
 
