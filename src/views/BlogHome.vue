@@ -166,7 +166,7 @@ export default {
             :key="post.slug + '_' + index"
           >
             <div class="main-raised blog-post">
-              <a :href="'/blog/' + post.slug">
+              <a :href="'/#/blog/' + post.slug">
                 <div class="tcell col s6 m2 l2" style="line-height: 3rem;">
                   {{post.date}}
                 </div>

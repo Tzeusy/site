@@ -37,7 +37,7 @@ export default new Router({
       name: 'blog-post',
       components: {default: BlogPost, header: MainNavbar, footer: MainFooter },
       props: {
-        header: { colorOnScroll: 400 },
+        header: { colorOnScroll: 1 },
         footer: { backgroundColor: "black" }
       }
     },
