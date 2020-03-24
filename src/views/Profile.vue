@@ -125,9 +125,9 @@
                         <p v-for="link in card.links" :key="link.icon" style="display: inline; margin:10px">
                           <!-- <p>{{link.icon}}</p> -->
                           <a v-if="link.href" :href="link.href">
-                            <i :class="link.icon" style="color:white;"></i>
+                            <i :class="link.icon" style="color:white; font-size: 1.2rem;"></i>
                           </a>
-                          <i v-if="link.description" :class="link.icon" style="color:white">
+                          <i v-if="link.description" :class="link.icon" style="color:white; font-size: 1.2rem;">
                             <p class="blurbsquared">
                               {{link.description}}
                             </p>
@@ -203,6 +203,10 @@ export default {
             {
               'icon': 'fa fa-trophy',
               'description': "Outstanding Contribution to Pillar"
+            },
+            {
+              'icon': 'fa fa-newspaper',
+              'href': '#/blog/project-jessica'
             },
           ]
         },

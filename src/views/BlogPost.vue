@@ -2,7 +2,7 @@
   import { butter } from '../buttercms'
   export default {
     name: 'blog-post',
-    bodyClass: "blog-page",
+    bodyClass: "blogpost-page",
     data() {
       return {
         post: null

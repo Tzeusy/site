@@ -35,9 +35,25 @@
 .section{
   padding: 70px 0;
 }
-.blog-page{
+
+.blogpost-page{
     .page-header{
         height: 80vh;
+        background-position: center center;
+
+        &::before {
+          background: rgba(0,0,0, .2);
+        }
+        &.header-small{
+            height: 10vh;
+            min-height: 10vh;
+        }
+    }
+}
+
+.blog-page{
+    .page-header{
+        height: 20vh;
         background-position: center center;
 
         &::before {

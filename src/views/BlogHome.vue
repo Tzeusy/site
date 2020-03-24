@@ -43,6 +43,7 @@ export default {
         });
         this.posts = res.data.data;
         this.paginatePosts();
+        console.log(this.posts)
       });
     },
     toggle(slug){
