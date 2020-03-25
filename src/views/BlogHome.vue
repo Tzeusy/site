@@ -212,7 +212,7 @@ export default {
           </div>
         </div>
         <div style='text-align:center'>
-          <i>Click icons to toggle categories. Many posts here are still placeholders, not yet production-ready with actual content - if so, forgive me! Coming soon! </i>
+          <i>Click icons to toggle categories. Posts will show if any of its categories are enabled.</i>
         </div>
       </div>
     </div>

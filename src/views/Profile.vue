@@ -186,6 +186,10 @@ export default {
               'icon': 'fa fa-trophy',
               'description': "Best Project Award"
             },
+            {
+              'icon': 'fa fa-newspaper',
+              'href': '#/blog/openai-car-racing-adventures'
+            },
           ]
         },
         {
@@ -266,6 +270,12 @@ export default {
                   making a more aesthetic or organized environment, and the like. Once I started using i3, a tiling 
                   window manager, I never looked back!
                   `,
+          links: [
+            {
+              'icon': 'fa fa-newspaper',
+              'href': '#/blog/setting-up-of-i3wm-ricing'
+            },
+          ]
         },
         {
           image: require("@/assets/img/mit.jpg"),
