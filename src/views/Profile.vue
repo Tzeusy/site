@@ -41,7 +41,9 @@
               I have also worked in the fields of quantitative finance and blockchain, having built products involving fullstack development, 
               data engineering/pipelining, data science and deep learning, and finance-related portfolio strategy development.
             </p>
-            <br />
+            <p> 
+              I am currently on the lookout for career opportunities - contact me at tzeuse@gmail.com if you'd like to know more, or if you have proposals!
+            </p>
           </div>
           <div class="profile">
             <div class="features text-center">

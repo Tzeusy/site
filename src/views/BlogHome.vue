@@ -119,100 +119,102 @@ export default {
 
 <template>
   <div class="wrapper">
-    <div
+    <parallax
       class="section page-header header-filter"
       :style="headerStyle"
-    ></div>
-    <div>
-      <h4 style="text-align: center"> Blog Posts </h4>
-      <div class="container blog-posts">
-        <div style="position: relative; height:20px">
-          <span
-            class="prev"
-            @click="move(-1)"
-          >
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-          </span>
-          <span
-            class="next"
-            @click="move(1)"
-          >
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-          </span>
-          <div style='margin-left:30%; margin-right:30%;'>
-            <ul class="dots" style='top:-2vh;'>
-              <li 
-                v-for="(dot, index) in paginations.length"
-                :class="{ active: index === current_page }"
-                :key = index
-                @click="jump(index)"
-              ></li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <!-- thead -->
-          <div style="display:table-row">
-            <div class="main-raised blog-post">
-              <div class="tcell theader col s6 m2 l2">Published</div>
-              <div class="tcell theader col s6 m4 l4">Title</div>
-              <div class="tcell theader col s6 m4 l4">Summary</div>
-              <div class="tcell theader col s6 m2 l2">Categories</div>
+    ></parallax>
+    <div class='main main-raised' style='padding: 30px'>
+      <div>
+        <h4 style="text-align: center;"> Blog Posts </h4>
+        <div class="container blog-posts">
+          <div style="position: relative; height:20px">
+            <span
+              class="prev"
+              @click="move(-1)"
+            >
+              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </span>
+            <span
+              class="next"
+              @click="move(1)"
+            >
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </span>
+            <div style='margin-left:30%; margin-right:30%;'>
+              <ul class="dots" style='top:-2vh;'>
+                <li 
+                  v-for="(dot, index) in paginations.length"
+                  :class="{ active: index === current_page }"
+                  :key = index
+                  @click="jump(index)"
+                ></li>
+              </ul>
             </div>
           </div>
-          <!-- tbody -->
-          <div 
-            style="display:table-row"
-            v-for="(post,index) in paginations[current_page]"
-            :key="post.slug + '_' + index"
-          >
-            <div class="main-raised blog-post">
-              <a :href="'/#/blog/' + post.slug">
-                <div class="tcell col s6 m2 l2" style="line-height: 3rem;">
-                  {{post.date}}
-                </div>
-                <div class="tcell col s6 m4 l4" style="line-height: 3rem;">
-                  {{post.title}}
-                </div>
-                <div class="tcell col s6 m4 l4">
-                  {{post.summary}}
-                </div>
-                <div class="tcell col s6 m2 l2">
-                  <div 
-                    v-for="element in post.tags"
-                    :key="element.slug"
-                    class="slug"
-                    :style="{
-                      border: 'solid 1px ' + colorMapper[element.slug.toUpperCase()],
-                      backgroundColor:colorMapper[element.slug.toUpperCase()]+'22'
-                    }"
-                  >{{element.slug.toUpperCase()}}</div>
-                </div>
-              </a>
+          <div class="row">
+            <!-- thead -->
+            <div style="display:table-row">
+              <div class="main-raised blog-post">
+                <div class="tcell theader col s6 m2 l2">Published</div>
+                <div class="tcell theader col s6 m4 l4">Title</div>
+                <div class="tcell theader col s6 m4 l4">Summary</div>
+                <div class="tcell theader col s6 m2 l2">Categories</div>
+              </div>
+            </div>
+            <!-- tbody -->
+            <div 
+              style="display:table-row"
+              v-for="(post,index) in paginations[current_page]"
+              :key="post.slug + '_' + index"
+            >
+              <div class="main-raised blog-post">
+                <a :href="'/#/blog/' + post.slug">
+                  <div class="tcell col s6 m2 l2" style="line-height: 3rem;">
+                    {{post.date}}
+                  </div>
+                  <div class="tcell col s6 m4 l4" style="line-height: 3rem;">
+                    {{post.title}}
+                  </div>
+                  <div class="tcell col s6 m4 l4">
+                    {{post.summary}}
+                  </div>
+                  <div class="tcell col s6 m2 l2">
+                    <div 
+                      v-for="element in post.tags"
+                      :key="element.slug"
+                      class="slug"
+                      :style="{
+                        border: 'solid 1px ' + colorMapper[element.slug.toUpperCase()],
+                        backgroundColor:colorMapper[element.slug.toUpperCase()]+'22'
+                      }"
+                    >{{element.slug.toUpperCase()}}</div>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Legend at the bottom -->
-        <div class="row" style="width:70vw">
-          <div
-            v-for="(name, slug) in slugMapper"
-            :key=name
-            style="display: flex; height:30px; margin-bottom: 1vh"
-            class="col s6 m6 l3"
-          >
+          <!-- Legend at the bottom -->
+          <div class="row" style="width:70vw">
             <div
-              :style="{
-                border: 'solid 1px ' + colorMapper[slug],
-                backgroundColor:colorMapper[slug]+'22',
-              }"
-              class="slug"
-              @click="toggle(slug.toUpperCase())"
-            >{{slug}}</div>
-            <div style="text-align:center; font-size: 0.8em; width:100%; display:inline-table">{{slugMapper[slug]}}</div>
+              v-for="(name, slug) in slugMapper"
+              :key=name
+              style="display: flex; height:30px; margin-bottom: 1vh"
+              class="col s6 m6 l3"
+            >
+              <div
+                :style="{
+                  border: 'solid 1px ' + colorMapper[slug],
+                  backgroundColor:colorMapper[slug]+'22',
+                }"
+                class="slug"
+                @click="toggle(slug.toUpperCase())"
+              >{{slug}}</div>
+              <div style="text-align:center; font-size: 0.8em; width:100%; display:inline-table">{{slugMapper[slug]}}</div>
+            </div>
           </div>
-        </div>
-        <div style='text-align:center'>
-          <i>Click icons to toggle categories. Posts will show if any of its categories are enabled.</i>
+          <div style='text-align:center'>
+            <i>Click icons to toggle categories. Posts will show if any of its categories are enabled.</i>
+          </div>
         </div>
       </div>
     </div>
