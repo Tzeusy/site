@@ -3,10 +3,9 @@
     class="footer"
     :class="{ [`footer-${type}`]: type }"
     :data-background-color="backgroundColor"
-    style = "min-height: 150px"
   >
-    <div class="container" style="width:100%">
-      <div style="text-align:center; width:100%; height:100%; margin: 30px;">
+    <div class="container">
+      <div style="text-align:center; width:100%; height:100%; padding: 30px;">
         Source code for this website accessible <a href="https://github.com/Tzeusy/site">here</a>. MIT License - feel free to clone for adaptation for personal use.<br />
         This site was built using Vue.js, with the <a href="https://materializecss.com"> Materialize CSS </a> and <a href="https://demos.creative-tim.com/material-kit/index.html">Material Kit</a> frameworks. 
         Blog powered by <a href="https://buttercms.com/"> ButterCMS </a>.<br />
@@ -35,5 +34,6 @@ export default {
 <style>
   .footer {
     bottom: 0;
+    width:100%;
   }
 </style>
