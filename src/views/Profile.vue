@@ -24,26 +24,26 @@
             </div>
           </div>
           <div class="description text-center">
-            <p>
+            <div>
               <!-- I enjoy reading about geopolitics, debating about ethics, and over-analyzing rational fiction. This site is a 
               consolidation  of my experiences across the various worlds I immerse myself in - be they my latest learnings in 
               the big field of software, my thoughts and ruminations on the fantastical universes of my SF/F exploration, or 
               even just reflections about arbitrary topics. -->
               Hello, and welcome to my profile page! <br />
-              I'm Tze How, a 25 year old Singaporean with a Bachelor's of Engineering from the <br />
+              I'm Tze How, a 24 year old Singaporean with a Bachelor's of Engineering from the <br />
               Information Systems Technology and Design (ISTD) pillar of the <br />
               Singapore University of Technology and 
               Design (SUTD).
-            </p>
+            </div>
             <p style="font-size: 12px">(A mouthful, I know - basically, I studied Computer Science.)</p>
             <p>
               I have experience with design and engineering with software development, data science/engineering, and machine learning. 
               I have also worked in the fields of quantitative finance and blockchain, having built products involving fullstack development, 
-              data engineering/pipelining, data science and deep learning, and finance-related portfolio strategy development.
+              data engineering/pipelining, data science and deep learning, along with some finance-related portfolio strategy development.
             </p>
-            <p> 
+            <!-- <p> 
               I am currently on the lookout for career opportunities - contact me at tzeuse@gmail.com if you'd like to know more, or if you have proposals!
-            </p>
+            </p> -->
           </div>
           <div class="profile">
             <div class="features text-center">
@@ -217,20 +217,16 @@ export default {
           ]
         },
         {
-          image: require("@/assets/img/badminton.jpg"),
-          title: 'Badminton Court Checking Telegram Bot',
-          blurb: `Cycling through Badminton court availabilities on OnePA.sg
-                  to quickly check for all badminton court availabilities via Telegram,
-                  and skip on the tedious individual checking otherwise necessary.
-          `,
+          image: require("@/assets/img/ricing.jpg"),
+          title: 'i3 Ricing',
+          blurb: `"Ricing" refers to customization of system interfaces - making processes more easily accessible,
+                  making a more aesthetic or organized environment, and the like. Once I started using i3, a tiling 
+                  window manager, I never looked back!
+                  `,
           links: [
             {
-              'icon': 'fab fa-github',
-              'href': 'https://github.com/Tzeusy/badminton_court_bot'
-            },
-            {
-              'icon': 'fa fa-trophy',
-              'description': "Wei Hao's eternal gratitude"
+              'icon': 'fa fa-newspaper',
+              'href': '#/blog/setting-up-of-i3wm-ricing'
             },
           ]
         },
@@ -253,7 +249,7 @@ export default {
         },
         {
           image: require("@/assets/img/traceto.jpg"),
-          title: 'Ethereum Address Analysis',
+          title: 'Ethereum Activity Analyzer',
           blurb: `A fully automated Ethereum address analysis report to check for violations
                   of MAS guidelines, monitor address general behavior, and identify related
                   exchanges or addresses. Built over summer internship for traceto.io (Codebase proprietary).
@@ -266,16 +262,20 @@ export default {
           ]
         },
         {
-          image: require("@/assets/img/ricing.jpg"),
-          title: 'i3 Ricing',
-          blurb: `"Ricing" refers to customization of system interfaces - making processes more easily accessible,
-                  making a more aesthetic or organized environment, and the like. Once I started using i3, a tiling 
-                  window manager, I never looked back!
-                  `,
+          image: require("@/assets/img/badminton.jpg"),
+          title: 'Badminton Court Checking Telegram Bot',
+          blurb: `Cycling through Badminton court availabilities on OnePA.sg
+                  to quickly check for all badminton court availabilities via Telegram,
+                  and skip on the tedious individual checking otherwise necessary.
+          `,
           links: [
             {
-              'icon': 'fa fa-newspaper',
-              'href': '#/blog/setting-up-of-i3wm-ricing'
+              'icon': 'fab fa-github',
+              'href': 'https://github.com/Tzeusy/badminton_court_bot'
+            },
+            {
+              'icon': 'fa fa-trophy',
+              'description': "Wei Hao's eternal gratitude"
             },
           ]
         },
@@ -323,11 +323,11 @@ export default {
           'icon': 'timeline',
           'class': "icon icon-danger",
           'topics': [
+            'd3.js, scikit-learn, numpy, pandas, matplotlib',
             'Deep Learning: PyTorch, TensorFlow',
-            'Data Pipelining & Engineering',
-            'Databases: PostgreSQL, MongoDB, Redis', 
-            'Python Libraries: scikit-learn, numpy, pandas, matplotlib, etc.',
+            'Data Pipelining',
             'Data Engineering',
+            'PostgreSQL, MongoDB, Redis',
           ]
         },
         {
@@ -336,11 +336,12 @@ export default {
           'class': "icon icon-info",
           'topics': [
             'Python',
-            'Linux',
+            'JavaScript (Fullstack Development): Vue, React',
             'C',
+            'Linux',
             'Version Control',
             'Cloud Development (EC2, GCP)',
-            'JavaScript (Fullstack Development): Vue, React',
+            'RESTful Protocol',
           ]
         },
         {
@@ -351,7 +352,8 @@ export default {
             'Portfolio Management',
             'Derivative Pricing',
             'Risk Analysis',
-            'Bloomberg Terminal: Python & Excel API familiarity',
+            'Bloomberg: Python & Excel API',
+            'Blockchain familiarity'
           ]
         },
       ]

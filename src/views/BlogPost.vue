@@ -52,7 +52,7 @@
     <div v-if="post" class="main main-raised">
       <div class="container" id="blog-post">
         <h2 style='padding-top: 4rem'>{{ post.data.title }}</h2>
-        <i>Published on {{ post.data.date }} by {{post.data.author.first_name}}</i>
+        <h6>{{post.data.author.first_name}}, {{ post.data.date }}</h6>
         <!-- {{ post.data.author.first_name }} {{ post.data.author.last_name }} -->
         <div v-html="post.data.body"></div>
         <div style='display: inline-block'>
@@ -86,6 +86,9 @@
   #blog-post {
     display: block;
     text-align: left;
+  }
+  #blog-post.ul{
+    padding-left: 40px;
   }
   .main-raised {
     margin-top: -50vh;

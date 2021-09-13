@@ -12,7 +12,7 @@
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run dev"
   },
   "dependencies": {
-    "buttercms": "^1.2.2",
+    "buttercms": "^1.2.7",
     "core-js": "3.5.0",
     "materialize-css": "^1.0.0",
     "nouislider": "14.1.0",
@@ -29,8 +29,9 @@
     "@vue/cli-plugin-babel": "4.1.1",
     "@vue/cli-plugin-eslint": "4.1.1",
     "@vue/cli-plugin-router": "4.1.1",
-    "@vue/cli-service": "4.1.1",
+    "@vue/cli-service": "^4.5.13",
     "@vue/eslint-config-prettier": "6.0.0",
+    "@babel/compat-data": "^7.9.0",
     "babel-eslint": "10.0.3",
     "eslint": "6.7.2",
     "eslint-plugin-prettier": "3.1.1",

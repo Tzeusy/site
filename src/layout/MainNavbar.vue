@@ -8,7 +8,7 @@
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">A Slice of Tze How's Life</h3>
+        <h3 class="md-title">Economics and Rationalism</h3>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
