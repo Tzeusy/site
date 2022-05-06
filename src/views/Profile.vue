@@ -29,13 +29,11 @@
               consolidation  of my experiences across the various worlds I immerse myself in - be they my latest learnings in 
               the big field of software, my thoughts and ruminations on the fantastical universes of my SF/F exploration, or 
               even just reflections about arbitrary topics. -->
-              Hello, and welcome to my profile page! <br />
-              I'm Tze How, a 24 year old Singaporean with a Bachelor's of Engineering from the <br />
-              Information Systems Technology and Design (ISTD) pillar of the <br />
-              Singapore University of Technology and 
-              Design (SUTD).
+              Hello, and welcome to my website!
+              I'm Tze How, a 26 year old Singaporean currently working as a Software Engineer in Squarepoint Capital. <br /><br />
+              I have a Bachelor's of Engineering from the Computer Science and Design (CSD) pillar of the <br />
+              Singapore University of Technology and Design (SUTD).<br /><br />
             </div>
-            <p style="font-size: 12px">(A mouthful, I know - basically, I studied Computer Science.)</p>
             <p>
               I have experience with design and engineering with software development, data science/engineering, and machine learning. 
               I have also worked in the fields of quantitative finance and blockchain, having built products involving fullstack development, 
@@ -323,7 +321,7 @@ export default {
           'icon': 'timeline',
           'class': "icon icon-danger",
           'topics': [
-            'd3.js, scikit-learn, numpy, pandas, matplotlib',
+            'Data Visualization: d3.js, scikit-learn, numpy, pandas, matplotlib',
             'Deep Learning: PyTorch, TensorFlow',
             'Data Pipelining',
             'Data Engineering',
@@ -341,7 +339,6 @@ export default {
             'Linux',
             'Version Control',
             'Cloud Development (EC2, GCP)',
-            'RESTful Protocol',
           ]
         },
         {
@@ -353,7 +350,7 @@ export default {
             'Derivative Pricing',
             'Risk Analysis',
             'Bloomberg: Python & Excel API',
-            'Blockchain familiarity'
+            'Blockchain'
           ]
         },
       ]
