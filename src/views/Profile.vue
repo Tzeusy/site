@@ -30,7 +30,7 @@
               the big field of software, my thoughts and ruminations on the fantastical universes of my SF/F exploration, or 
               even just reflections about arbitrary topics. -->
               Hello, and welcome to my website!
-              I'm Tze How, a 26 year old Singaporean currently working as a Software Engineer in Squarepoint Capital. <br /><br />
+              I'm Tze How, a 27 year old Singaporean currently working as a Software Engineer in Citadel. <br /><br />
               I have a Bachelor's of Engineering from the Computer Science and Design (CSD) pillar of the <br />
               Singapore University of Technology and Design (SUTD).<br /><br />
             </div>
@@ -335,7 +335,7 @@ export default {
           'topics': [
             'Python',
             'JavaScript (Fullstack Development): Vue, React',
-            'C',
+            'Kubernetes',
             'Linux',
             'Version Control',
             'Cloud Development (EC2, GCP)',
@@ -349,7 +349,7 @@ export default {
             'Portfolio Management',
             'Derivative Pricing',
             'Risk Analysis',
-            'Bloomberg: Python & Excel API',
+            'Bloomberg: Python & Excel APIs',
             'Blockchain'
           ]
         },
