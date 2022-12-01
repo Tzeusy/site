@@ -8,7 +8,7 @@
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">This Then That</h3>
+        <h3 class="md-title"><a href="https://tze.how" class="always-white-link">tze.how</a></h3>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -121,6 +121,7 @@
 </template>
 
 <script>
+
 let resizeTimeout;
 function resizeThrottler(actualResizeHandler) {
   // ignore resize events as long as an actualResizeHandler execution is in the queue
@@ -226,3 +227,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.always-white-link {
+  color: #fff !important;
+  text-decoration: none;
+}
+</style>

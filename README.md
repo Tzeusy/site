@@ -4,15 +4,18 @@ My personal webpage. Though theoretically noone _needs_ to run this repository (
 This is built in Vue.js, with design inspired by and built using tools found from [Creative Tim's Vue Material Kit](https://www.creative-tim.com/product/vue-material-kit) and [Materialize CSS](https://materializecss.com/).
 
 ## Prerequisites
+
 The project was built using `node v13.9.0` and `npm v6.13.7`. After ensuring the presence of Node.js and npm on your system, proceed with Getting Started.
 
 ## Getting Started
+
 - Clone the repository:
 ```git clone https://github.com/Tzeusy/site```
 - Install all relevant packages:
 ```npm i```
 
 ## Running
+
 Specifications regarding npm behavior are specifed in `package.json`. Instructions for different use cases as follows:
 - Development: ```npm run dev```
 - Production: ```npm run build```
@@ -20,7 +23,9 @@ Specifications regarding npm behavior are specifed in `package.json`. Instructio
   - `deploy.sh` goes through the process of building and pushing all changes on the local repository to a separate sub-repository containing only the compiled files (i.e. the `dist/` folder post-`npm build`), shown in `tzeusy.github.io`. Hence, make sure your local repository is the production-ready version before running `deploy.sh`.
 
 ## Authors
+
 Tze How - https://github.com/Tzeusy/.
 
 ## License
+
 This project is licensed under the MIT License - see the LICENSE.md file for details
