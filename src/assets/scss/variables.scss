@@ -1,0 +1,27 @@
+// Colors
+$light-background: #ffffff;
+$light-text: #333333;
+$light-border: #e0e0e0;
+
+$dark-background: #1a1a1a;
+$dark-text: #f0f0f0;
+$dark-border: #444444;
+
+$accent-color: #007bff; // Example accent color
+
+// Typography
+$font-family-base: 'Roboto', sans-serif;
+$font-family-heading: 'Roboto Thin', sans-serif; // Example for light typography
+
+// Spacing (8-point grid system)
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
+$spacing-xl: 64px;
+
+// Breakpoints for responsiveness
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

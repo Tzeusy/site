@@ -1,114 +1,112 @@
-<script>
-  import { butter } from '../buttercms'
-  export default {
-    name: 'blog-post',
-    bodyClass: "blogpost-page",
-    data() {
-      return {
-        post: null
-      }
-    },
-    methods: {
-      getPost() {
-        butter.post.retrieve(this.$route.params.slug)
-          .then(res => {
-            this.post = res.data;
-            let date = new Date(this.post.data.published);
-            this.post.data.date = date.toLocaleDateString('en-sg');
-          })
-      },
-      headerStyle() {
-        return {
-          backgroundImage: `url(${this.post.data.featured_image})`
-        };
-      }
-    },
-    watch: {
-      $route: {
-        immediate: true,
-        handler(to, from) {
-          console.log(to, from)
-          this.getPost()
-        }
-      }
-    },
-    props: {
-      header: {
-        type: String,
-        default: require("@/assets/img/poc.jpg")
-      },
-    },
-    created() {
-      this.getPost()
-    },
-  }
-</script>
 <template>
-  <div class="wrapper">
-    <parallax
-      class="section page-header header-filter"
-      :style="headerStyle()"
-    ></parallax>
-    <div v-if="post" class="main main-raised">
-      <div class="container" id="blog-post">
-        <h2 style='padding-top: 4rem'>{{ post.data.title }}</h2>
-        <h6>{{post.data.author.first_name}}, {{ post.data.date }}</h6>
-        <!-- {{ post.data.author.first_name }} {{ post.data.author.last_name }} -->
-        <div v-html="post.data.body"></div>
-        <div style='display: inline-block'>
-          <router-link
-            v-if="post.meta.previous_post"
-            :to="/blog/ + post.meta.previous_post.slug"
-            class="button left"
-          >
-            &lt;&lt; Previous Post: <br />{{ post.meta.previous_post.title }}
-          </router-link>
-          <router-link
-            :to="/blog/"
-            class="button middle"
-          >
-            Back to Blog Home
-          </router-link>
-          <router-link
-            v-if="post.meta.next_post"
-            :to="/blog/ + post.meta.next_post.slug"
-            class="button right"
-          >
-            >> Next Post: <br />{{ post.meta.next_post.title }}
-          </router-link>
-        </div>
-        <div style="margin: 4rem"></div>
-      </div>
+  <div class="blog-post-page section">
+    <div v-if="post" class="container">
+      <h1 class="post-title">{{ post.title }}</h1>
+      <p class="post-meta">Published on {{ formatDate(post.published) }}</p>
+      <!-- eslint-disable-next-line vue/no-v-html -->
+      <div class="post-body" v-html="post.body"></div>
+    </div>
+    <div v-else class="container">
+      <p>Loading blog post...</p>
     </div>
   </div>
 </template>
+
+<script setup>
+/* eslint-disable vue/no-v-html */
+import { ref, onMounted, watch } from 'vue';
+import { useRoute } from 'vue-router';
+import butter from '@/api/buttercms';
+
+const route = useRoute();
+const post = ref(null);
+
+const fetchPost = async (slug) => {
+  try {
+    const response = await butter.post.retrieve(slug);
+    post.value = response.data.data;
+  } catch (error) {
+    console.error('Error fetching blog post:', error);
+    post.value = null; // Clear post on error
+  }
+};
+
+const formatDate = (dateString) => {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(dateString).toLocaleDateString(undefined, options);
+};
+
+onMounted(() => {
+  fetchPost(route.params.slug);
+});
+
+watch(() => route.params.slug, (newSlug) => {
+  fetchPost(newSlug);
+});
+</script>
+
 <style lang="scss" scoped>
-  #blog-post {
-    display: block;
-    text-align: left;
-  }
-  #blog-post.ul{
-    padding-left: 40px;
-  }
-  .main-raised {
-    margin-top: -50vh;
-    margin-left: 12vw;
-    margin-right: 12vw;
-    padding-bottom: 20px;
-    background: #FFFFFFF7
-  }
-  .middle {
-    position:absolute;
-    margin:auto;
-    width:100%;
+.blog-post-page {
+  .post-title {
     text-align: center;
+    margin-bottom: var(--spacing-sm);
   }
-  .left {
-    position:absolute;
-    left: 0;
+
+  .post-meta {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-bottom: var(--spacing-lg);
   }
-  .right {
-    position: absolute;
-    right: 0;
+
+  .post-body {
+    line-height: 1.6;
+
+    // Basic styling for ButterCMS content
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 300;
+      margin-top: var(--spacing-lg);
+      margin-bottom: var(--spacing-md);
+    }
+
+    p {
+      margin-bottom: var(--spacing-md);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: var(--spacing-md) auto;
+    }
+
+    ul, ol {
+      margin-left: var(--spacing-lg);
+      margin-bottom: var(--spacing-md);
+    }
+
+    blockquote {
+      border-left: 4px solid var(--accent-color);
+      padding-left: var(--spacing-md);
+      margin: var(--spacing-md) 0;
+      color: var(--text-color);
+      opacity: 0.8;
+    }
+
+    pre {
+      background-color: var(--border-color);
+      padding: var(--spacing-md);
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: 'Fira Code', monospace; // Example for code font
+      background-color: var(--border-color);
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
   }
+}
 </style>

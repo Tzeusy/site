@@ -1,0 +1,53 @@
+@import './variables.scss';
+
+:root {
+  --background-color: #{$light-background};
+  --text-color: #{$light-text};
+  --accent-color: #{$accent-color};
+  --border-color: #{$light-border};
+}
+
+[data-theme='dark'] {
+  --background-color: #{$dark-background};
+  --text-color: #{$dark-text};
+  --border-color: #{$dark-border};
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+  font-family: var(--font-family-heading);
+  font-weight: 300; // Light typography
+}
+
+// General layout and spacing
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section {
+  padding: var(--spacing-lg) 0;
+}
+
+// Thin borders
+.border-bottom {
+  border-bottom: 1px solid var(--border-color);
+}
